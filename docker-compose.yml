@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  backend:
+    build:
+      context: ./backend
+    image: renewable-backend:latest
+    container_name: renewable_backend
+    ports:
+      - "8000:8000"
+    environment:
+      - ELEXON_API_KEY=${ELEXON_API_KEY}
+    restart: unless-stopped
+  frontend:
+    build:
+      context: ./frontend
+    image: renewable-frontend:latest
+    container_name: renewable_frontend
+    ports:
+      - "5173:80"
+    restart: unless-stopped
+    # For Vite dev server you could expose 5173, but using nginx static serve for prod.

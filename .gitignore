@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+.env
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
+
+# Node / npm
+node_modules/
+npm-debug.log
+yarn-error.log
+pnpm-debug.log
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# macOS
+.DS_Store
